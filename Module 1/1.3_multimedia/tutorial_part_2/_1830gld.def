@@ -1,0 +1,10 @@
+SLAVE:
+INPUT: _1830gld.inm
+MODNAME: apmain
+RUNID: _1830gld
+NEW_RUNID: _1830gld
+OLD_RUNID: _1830gld
+PDF: _1830gld.appdf
+USERNAME: Bryan
+XMOD: D:\ASPEN\Aspen Plus V11.0\Engine\xeq\apmain
+DBCONN: _1830gld.ads
