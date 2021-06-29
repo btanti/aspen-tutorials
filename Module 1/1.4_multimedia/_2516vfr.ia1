@@ -1,0 +1,206 @@
+
+ BLOCK:  HEATEX   MODEL: HEATX           
+ -----------------------------
+   HOT SIDE:
+   ---------
+   INLET STREAM:             HOT-IN  
+   OUTLET STREAM:            HOT-OUT 
+   PROPERTY OPTION SET:   RK-SOAVE  STANDARD RKS EQUATION OF STATE              
+   COLD SIDE:
+   ----------
+   INLET STREAM:             COOL-IN 
+   OUTLET STREAM:            COOL-OUT
+   PROPERTY OPTION SET:   RK-SOAVE  STANDARD RKS EQUATION OF STATE              
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            73.7251         73.7251         0.00000    
+       MASS(KG/HR   )            1496.85         1496.85         0.00000    
+       ENTHALPY(CAL/SEC )       -783864.        -783864.       -0.148515E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             11906.8      KG/HR           
+    PRODUCT STREAMS CO2E          11906.8      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+   FLASH SPECS FOR HOT SIDE:
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLASH SPECS FOR COLD SIDE:
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLOW DIRECTION AND SPECIFICATION:
+     COUNTERCURRENT   HEAT EXCHANGER
+     SPECIFIED HOT OUTLET TEMP     
+     SPECIFIED VALUE                C                      100.0000
+     LMTD CORRECTION FACTOR                                  1.00000
+
+   PRESSURE SPECIFICATION:
+     HOT  SIDE PRESSURE DROP        BAR                      0.0000
+     COLD SIDE PRESSURE DROP        BAR                      0.0000
+
+   HEAT TRANSFER COEFFICIENT SPECIFICATION:
+     HOT LIQUID    COLD LIQUID      CAL/SEC-SQCM-K           0.0203
+     HOT 2-PHASE   COLD LIQUID      CAL/SEC-SQCM-K           0.0203
+     HOT VAPOR     COLD LIQUID      CAL/SEC-SQCM-K           0.0203
+     HOT LIQUID    COLD 2-PHASE     CAL/SEC-SQCM-K           0.0203
+     HOT 2-PHASE   COLD 2-PHASE     CAL/SEC-SQCM-K           0.0203
+     HOT VAPOR     COLD 2-PHASE     CAL/SEC-SQCM-K           0.0203
+     HOT LIQUID    COLD VAPOR       CAL/SEC-SQCM-K           0.0203
+     HOT 2-PHASE   COLD VAPOR       CAL/SEC-SQCM-K           0.0203
+     HOT VAPOR     COLD VAPOR       CAL/SEC-SQCM-K           0.0203
+
+                        ***  OVERALL RESULTS  ***
+
+   STREAMS:
+                   --------------------------------------
+                   |                                    |
+   HOT-IN    ----->|                HOT                 |-----> HOT-OUT 
+   T=  2.0444D+02  |                                    |       T=  1.0000D+02
+   P=  1.0135D+00  |                                    |       P=  1.0135D+00
+   V=  1.0000D+00  |                                    |       V=  1.0000D+00
+                   |                                    |
+   COOL-OUT  <-----|                COLD                |<----- COOL-IN 
+   T=  1.0254D+02  |                                    |       T=  2.0000D+01
+   P=  1.0000D+00  |                                    |       P=  1.0000D+00
+   V=  2.0082D-02  |                                    |       V=  0.0000D+00
+                   --------------------------------------
+
+   DUTY AND AREA:
+     CALCULATED HEAT DUTY           CAL/SEC              16165.2280
+     CALCULATED (REQUIRED) AREA     SQM                      0.9186
+     ACTUAL EXCHANGER AREA          SQM                      0.9186
+     PER CENT OVER-DESIGN                                    0.0000
+
+   HEAT TRANSFER COEFFICIENT:
+     AVERAGE COEFFICIENT (DIRTY)    CAL/SEC-SQCM-K           0.0203
+     UA (DIRTY)                     CAL/SEC-K              186.4862
+
+   LOG-MEAN TEMPERATURE DIFFERENCE:
+     LMTD CORRECTION FACTOR                                  1.0000
+     LMTD (CORRECTED)               C                       86.6833
+     NUMBER OF SHELLS IN SERIES                               1
+
+   PRESSURE DROP:
+     HOTSIDE, TOTAL                 BAR                      0.0000
+     COLDSIDE, TOTAL                BAR                      0.0000
+
+                        ***  ZONE RESULTS  ***
+
+   TEMPERATURE LEAVING EACH ZONE:
+
+                                     HOT 
+         -------------------------------------------------------------
+         |                             |                             |
+ HOT IN  |             VAP             |             VAP             | HOT OUT 
+ ------> |                             |                             |------>
+  204.4  |                        194.1|                             |  100.0
+         |                             |                             |
+ COLDOUT |             BOIL            |             LIQ             | COLDIN  
+ <------ |                             |                             |<------
+  102.5  |                        102.5|                             |   20.0
+         |                             |                             |
+         -------------------------------------------------------------
+                                     COLD
+
+   ZONE HEAT TRANSFER AND AREA:
+
+   ZONE       HEAT DUTY       AREA       LMTD       AVERAGE U       UA
+              CAL/SEC         SQM         C         CAL/SEC-SQCM-K  CAL/SEC-K       
+     1       1731.518         0.0883      96.6158     0.0203          17.9217
+     2      14433.710         0.8303      85.6272     0.0203         168.5645
+
+ HEATX COLD-TQCU HEATEX   TQCURV INLET   
+ -------------------------------------
+   PRESSURE PROFILE:      CONSTANT2   
+   PRESSURE DROP:         0.0         BAR             
+   PROPERTY OPTION SET:   RK-SOAVE  STANDARD RKS EQUATION OF STATE              
+
+ -----------------------------------------------------
+ !  DUTY      !  PRES      !  TEMP      !  VFRAC     !
+ !            !            !            !            !
+ !            !            !            !            !
+ !            !            !            !            !
+ !  CAL/SEC   !  BAR       !  C         !            !
+ !            !            !            !            !
+ !============!============!============!============!
+ !     0.0    !     1.0000 !   102.5390 !  2.0082-02 !
+ !   769.7728 !     1.0000 !   102.5390 !  1.1154-02 !
+ !  1539.5455 !     1.0000 !   102.5390 !  2.2265-03 !
+ !  1731.5178 !     1.0000 !   102.5390 ! BUB>0.0    !
+ !  2309.3183 !     1.0000 !    99.2635 !     0.0    !
+ !------------+------------+------------+------------!
+ !  3079.0911 !     1.0000 !    94.8928 !     0.0    !
+ !  3848.8638 !     1.0000 !    90.5146 !     0.0    !
+ !  4618.6366 !     1.0000 !    86.1296 !     0.0    !
+ !  5388.4093 !     1.0000 !    81.7386 !     0.0    !
+ !  6158.1821 !     1.0000 !    77.3422 !     0.0    !
+ !------------+------------+------------+------------!
+ !  6927.9549 !     1.0000 !    72.9411 !     0.0    !
+ !  7697.7276 !     1.0000 !    68.5359 !     0.0    !
+ !  8467.5004 !     1.0000 !    64.1273 !     0.0    !
+ !  9237.2732 !     1.0000 !    59.7160 !     0.0    !
+ !  1.0007+04 !     1.0000 !    55.3026 !     0.0    !
+ !------------+------------+------------+------------!
+ !  1.0777+04 !     1.0000 !    50.8878 !     0.0    !
+ !  1.1547+04 !     1.0000 !    46.4723 !     0.0    !
+ !  1.2316+04 !     1.0000 !    42.0567 !     0.0    !
+ !  1.3086+04 !     1.0000 !    37.6417 !     0.0    !
+ !  1.3856+04 !     1.0000 !    33.2278 !     0.0    !
+ !------------+------------+------------+------------!
+ !  1.4626+04 !     1.0000 !    28.8158 !     0.0    !
+ !  1.5395+04 !     1.0000 !    24.4063 !     0.0    !
+ !  1.6165+04 !     1.0000 !    20.0000 !     0.0    !
+ -----------------------------------------------------
+
+ HEATX HOT-TQCUR HEATEX   TQCURV INLET   
+ -------------------------------------
+   PRESSURE PROFILE:      CONSTANT2   
+   PRESSURE DROP:         0.0         BAR             
+   PROPERTY OPTION SET:   RK-SOAVE  STANDARD RKS EQUATION OF STATE              
+
+ -----------------------------------------------------
+ !  DUTY      !  PRES      !  TEMP      !  VFRAC     !
+ !            !            !            !            !
+ !            !            !            !            !
+ !            !            !            !            !
+ !  CAL/SEC   !  BAR       !  C         !            !
+ !            !            !            !            !
+ !============!============!============!============!
+ !     0.0    !     1.0135 !   204.4444 !     1.0000 !
+ !   769.7728 !     1.0135 !   199.8440 !     1.0000 !
+ !  1539.5455 !     1.0135 !   195.2116 !     1.0000 !
+ !  1731.5178 !     1.0135 !   194.0513 !     1.0000 !
+ !  2309.3183 !     1.0135 !   190.5467 !     1.0000 !
+ !------------+------------+------------+------------!
+ !  3079.0911 !     1.0135 !   185.8483 !     1.0000 !
+ !  3848.8638 !     1.0135 !   181.1158 !     1.0000 !
+ !  4618.6366 !     1.0135 !   176.3482 !     1.0000 !
+ !  5388.4093 !     1.0135 !   171.5447 !     1.0000 !
+ !  6158.1821 !     1.0135 !   166.7045 !     1.0000 !
+ !------------+------------+------------+------------!
+ !  6927.9549 !     1.0135 !   161.8266 !     1.0000 !
+ !  7697.7276 !     1.0135 !   156.9102 !     1.0000 !
+ !  8467.5004 !     1.0135 !   151.9542 !     1.0000 !
+ !  9237.2732 !     1.0135 !   146.9578 !     1.0000 !
+ !  1.0007+04 !     1.0135 !   141.9198 !     1.0000 !
+ !------------+------------+------------+------------!
+ !  1.0777+04 !     1.0135 !   136.8394 !     1.0000 !
+ !  1.1547+04 !     1.0135 !   131.7155 !     1.0000 !
+ !  1.2316+04 !     1.0135 !   126.5471 !     1.0000 !
+ !  1.3086+04 !     1.0135 !   121.3331 !     1.0000 !
+ !  1.3856+04 !     1.0135 !   116.0724 !     1.0000 !
+ !------------+------------+------------+------------!
+ !  1.4626+04 !     1.0135 !   110.7640 !     1.0000 !
+ !  1.5395+04 !     1.0135 !   105.4069 !     1.0000 !
+ !  1.6165+04 !     1.0135 !   100.0000 !     1.0000 !
+ -----------------------------------------------------

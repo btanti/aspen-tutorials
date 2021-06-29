@@ -1,0 +1,300 @@
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION HISTORY                     + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       JUNE 29, 2021       
+ VERSION: 37.0   Build 398 Patchlevel 2                  TUESDAY     
+ INSTALLATION:                                           4:56:57 P.M.        
+
+ THIS COPY OF ASPEN PLUS LICENSED TO CORNELL UNIV                    
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+ *** INPUT SUMMARY ***
+
+ >>CURRENT RUN
+
+   ORIGINAL RUN                           JUNE 29, 2021       
+   4:56:57 P.M.                           TUESDAY     
+   INPUT FILE: _5021qzp.inm
+   RUN ID : _5021qzp
+          1    ;
+          2    ;Input file created by Aspen Plus Rel. 37.0 at 16:56:56 Tue Jun 29, 2021
+          3    ;Directory   Runid TUTORIAL_PART_3
+          4    ;
+          5
+          6
+          7    DYNAMICS
+          8        DYNAMICS RESULTS=ON
+          9
+         10    IN-UNITS MET PRESSURE=bar TEMPERATURE=C DELTA-T=C PDROP=bar  &
+         11            INVERSE-PRES='1/bar' SHORT-LENGTH=mm
+         12
+         13    DEF-STREAMS CONVEN ALL
+         14
+         15    MODEL-OPTION
+         16
+         17    DATABANKS 'APV110 PURE37' / 'APV110 AQUEOUS' / 'APV110 SOLIDS' &
+         18             / 'APV110 INORGANIC' / 'APESV110 AP-EOS' /  &
+         19            'NISTV110 NIST-TRC' / NOASPENPCD
+         20
+         21    PROP-SOURCES 'APV110 PURE37' / 'APV110 AQUEOUS' /  &
+         22            'APV110 SOLIDS' / 'APV110 INORGANIC' / 'APESV110 AP-EOS' &
+         23             / 'NISTV110 NIST-TRC'
+         24
+         25    COMPONENTS
+         26        WATER H2O /
+         27        METHANE CH4 /
+         28        ETHANE C2H6 /
+         29        PROPA-01 C3H8
+         30
+         31    SOLVE
+         32        RUN-MODE MODE=SIM
+         33
+         34    FLOWSHEET
+         35        BLOCK HEATEX IN=HOT-IN COOL-IN OUT=HOT-OUT COOL-OUT
+         36
+         37    PROPERTIES RK-SOAVE
+         38
+         39    PROP-DATA RKSKBV-1
+         40        IN-UNITS MET PRESSURE=bar TEMPERATURE=C DELTA-T=C PDROP=bar  &
+         41            INVERSE-PRES='1/bar' SHORT-LENGTH=mm
+         42        PROP-LIST RKSKBV
+         43        BPVAL METHANE ETHANE -7.8000000E-3 0.0 0.0 -273.1500000  &
+         44            726.8500000
+         45        BPVAL ETHANE METHANE -7.8000000E-3 0.0 0.0 -273.1500000  &
+         46            726.8500000
+         47        BPVAL METHANE PROPA-01 9.00000000E-3 0.0 0.0 -273.1500000  &
+         48            726.8500000
+         49        BPVAL PROPA-01 METHANE 9.00000000E-3 0.0 0.0 -273.1500000  &
+         50            726.8500000
+         51        BPVAL ETHANE PROPA-01 -2.2000000E-3 0.0 0.0 -273.1500000  &
+         52            726.8500000
+         53        BPVAL PROPA-01 ETHANE -2.2000000E-3 0.0 0.0 -273.1500000  &
+         54            726.8500000
+         55
+         56    STREAM COOL-IN
+         57        SUBSTREAM MIXED TEMP=68. <F> PRES=14.7 <psia>  &
+         58            MASS-FLOW=20. <lb/min>
+         59        MASS-FRAC WATER 1.
+         60
+         61    STREAM HOT-IN
+         62        SUBSTREAM MIXED TEMP=400. <F> PRES=14.7 <psia>  &
+         63            MASS-FLOW=35. <lb/min>
+         64        MOLE-FLOW METHANE 50. / ETHANE 30. / PROPA-01 20.
+         65
+         66    BLOCK HEATEX HEATX
+         67        PARAM T-HOT=212. <F> CALC-TYPE=DESIGN MIN-TAPP=15. <F>  &
+         68            U-OPTION=PHASE F-OPTION=CONSTANT CALC-METHOD=SHORTCUT
+         69        FEEDS HOT=HOT-IN COLD=COOL-IN
+         70        OUTLETS-HOT HOT-OUT
+         71        OUTLETS-COLD COOL-OUT
+         72        HOT-SIDE DP-OPTION=CONSTANT DPPARMOPT=NO
+         73        COLD-SIDE DP-OPTION=CONSTANT DPPARMOPT=NO
+         74        TQ-PARAM CURVE=YES
+         75
+         76    EO-CONV-OPTI
+         77
+         78    STREAM-REPOR MOLEFLOW
+         79    ;
+         80    ;
+         81    ;
+         82    ;
+         83    ;
+ *** INPUT TRANSLATOR MESSAGES ***
+
+  *** THIS RUN USES THE PROPERTIES ENTERPRISE DATABASE ***
+      SQLLOCALDB.APESV110 : (DATAVERSION - 37.0.0.22)                         
+      SQLLOCALDB.APV110 : (DATAVERSION - 37.0.0.27)                           
+      SQLLOCALDB.FACTV110 : (DATAVERSION - 37.0.0.11)                         
+      SQLLOCALDB.NISTV110 : (DATAVERSION - 37.0.0.27)                         
+
+  *   WARNING IN THE "STREAM" PARAGRAPH WHICH BEGINS ON LINE 61                 
+      STREAM NAME: HOT-IN                                      (STSTRM.28)      
+      COMPONENT MOLE FLOWS OF SUBSTREAM: "MIXED"                                
+      ARE NORMALIZED TO THE TOTAL MOLE FLOW VALUE.                              
+ 
+ 
+
+ PDF updated                                                                      TIME =      2.61
+
+ *** CALCULATION TRACE ***
+
+
+ *** FLOWSHEET ANALYSIS MESSAGES ***
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   COOL-IN    ----       HEATEX         HOT-IN     ----       HEATEX  
+   HOT-OUT    HEATEX     ----           COOL-OUT   HEATEX     ----    
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+
+   BLOCK        INLETS                         OUTLETS
+   HEATEX       HOT-IN COOL-IN                 HOT-OUT COOL-OUT            
+
+      COMPUTATION ORDER FOR THE FLOWSHEET IS:
+      HEATEX 
+
+Calculations begin                                                              time      0.29
+
+
+ SIMULATION CALCULATIONS BEGIN                                                    TIME =      0.29
+
+      ENTHALPY CALCULATION FOR INLET STREAM HOT-IN OF BLOCK HEATEX                TIME =      0.30
+      KODE = 2  NTRIAL =   0  T = 477.5944  P =  101353.      V =  1.00000      Q =  0.00000    
+
+      ENTHALPY CALCULATION FOR INLET STREAM COOL-IN OF BLOCK HEATEX               TIME =      0.51
+      KODE = 2  NTRIAL =   1  T = 293.1500  P =  101353.      V =  0.00000      Q =  0.00000    
+
+      UOS BLOCK HEATEX   MODEL: HEATX                                             TIME =      0.54
+      SPECIFICATION: HOT OUTLET TEMP       373.15    
+      FLOW TYPE:     COUNTERCURRENT  
+      HOT:  TIN=  477.59  PIN=0.10135E+06   TOUT=  373.15  POUT=0.10135E+06
+      COLD: TIN=  293.15  PIN=0.10135E+06   TOUT=  376.05  POUT=0.10135E+06
+                              DUTY= 65717.    
+
+      GENERATING RESULTS FOR UOS BLOCK HEATEX   MODEL: HEATX                      TIME =      0.77
+      SPECIFICATION: HOT OUTLET TEMP       373.15    
+      FLOW TYPE:     COUNTERCURRENT  
+      HOT:  TIN=  477.59  PIN=0.10135E+06   TOUT=  373.15  POUT=0.10135E+06
+      COLD: TIN=  293.15  PIN=0.10135E+06   TOUT=  376.05  POUT=0.10135E+06
+      AREA=0.88211           DUTY= 65717.           FT=1.00000
+
+      BEGIN HEATX TQ-CURVE CALCULATIONS FOR BLOCK HEATEX  
+
+      BEGIN COLD-TQCURVE INLET   
+      KODE = 1  NTRIAL =   3  T = 376.0527  P =  101353.      V = 1.390351E-02  Q =  0.00000    
+      KODE = 1  NTRIAL =   1  T = 376.0527  P =  101353.      V = 5.230758E-03  Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  374.372    
+      KODE = 1  NTRIAL =   2  T = 374.3720  P =  101353.      V =  0.00000      Q =  0.00000    
+      KODE = 3  NTRIAL =   2  T = 376.0527  P =  101353.      V =  0.00000      Q = -5016.76    
+      NO. TEMP ITER =    4     TEMP =  374.372    
+      KODE = 1  NTRIAL =   2  T = 374.3720  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  370.132    
+      KODE = 1  NTRIAL =   2  T = 370.1317  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  365.884    
+      KODE = 1  NTRIAL =   2  T = 365.8840  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  361.630    
+      KODE = 1  NTRIAL =   2  T = 361.6296  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  357.369    
+      KODE = 1  NTRIAL =   2  T = 357.3691  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  353.103    
+      KODE = 1  NTRIAL =   2  T = 353.1032  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  348.833    
+      KODE = 1  NTRIAL =   2  T = 348.8325  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  344.558    
+      KODE = 1  NTRIAL =   2  T = 344.5576  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  340.279    
+      KODE = 1  NTRIAL =   2  T = 340.2790  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  335.997    
+      KODE = 1  NTRIAL =   2  T = 335.9975  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  331.714    
+      KODE = 1  NTRIAL =   2  T = 331.7136  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  327.428    
+      KODE = 1  NTRIAL =   2  T = 327.4279  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  323.141    
+      KODE = 1  NTRIAL =   2  T = 323.1410  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  318.854    
+      KODE = 1  NTRIAL =   2  T = 318.8535  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  314.566    
+      KODE = 1  NTRIAL =   2  T = 314.5661  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  310.279    
+      KODE = 1  NTRIAL =   2  T = 310.2793  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  305.994    
+      KODE = 1  NTRIAL =   2  T = 305.9937  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  301.710    
+      KODE = 1  NTRIAL =   2  T = 301.7099  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  297.428    
+      KODE = 1  NTRIAL =   2  T = 297.4284  P =  101353.      V =  0.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  293.150    
+      KODE = 1  NTRIAL =   2  T = 293.1500  P =  101353.      V =  0.00000      Q =  0.00000    
+
+      BEGIN HOT-TQCURVE  INLET   
+      NO. TEMP ITER =    5     TEMP =  477.594    
+      KODE = 1  NTRIAL =   0  T = 477.5944  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  473.016    
+      KODE = 1  NTRIAL =   0  T = 473.0156  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  470.238    
+      KODE = 1  NTRIAL =   0  T = 470.2381  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  468.404    
+      KODE = 1  NTRIAL =   0  T = 468.4037  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  463.758    
+      KODE = 1  NTRIAL =   0  T = 463.7579  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  459.077    
+      KODE = 1  NTRIAL =   0  T = 459.0773  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  454.361    
+      KODE = 1  NTRIAL =   0  T = 454.3610  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  449.608    
+      KODE = 1  NTRIAL =   0  T = 449.6080  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    5     TEMP =  444.817    
+      KODE = 1  NTRIAL =   0  T = 444.8173  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  439.988    
+      KODE = 1  NTRIAL =   0  T = 439.9878  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  435.119    
+      KODE = 1  NTRIAL =   0  T = 435.1186  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  430.209    
+      KODE = 1  NTRIAL =   0  T = 430.2085  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  425.256    
+      KODE = 1  NTRIAL =   0  T = 425.2564  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  420.261    
+      KODE = 1  NTRIAL =   0  T = 420.2611  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  415.221    
+      KODE = 1  NTRIAL =   0  T = 415.2214  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    4     TEMP =  410.136    
+      KODE = 1  NTRIAL =   0  T = 410.1361  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  405.004    
+      KODE = 1  NTRIAL =   5  T = 405.0039  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  399.823    
+      KODE = 1  NTRIAL =   5  T = 399.8234  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  394.593    
+      KODE = 1  NTRIAL =   5  T = 394.5934  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  389.312    
+      KODE = 1  NTRIAL =   5  T = 389.3124  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  383.979    
+      KODE = 1  NTRIAL =   5  T = 383.9791  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  378.592    
+      KODE = 1  NTRIAL =   5  T = 378.5921  P =  101353.      V =  1.00000      Q =  0.00000    
+      NO. TEMP ITER =    6     TEMP =  373.150    
+      KODE = 1  NTRIAL =   5  T = 373.1500  P =  101353.      V =  1.00000      Q =  0.00000    
+
+      BEGIN COLD-TQCURVE INLET   
+
+      BEGIN HOT-TQCURVE  INLET   
+      END HEATX TQ-CURVE CALCULATIONS FOR BLOCK HEATEX  
+
+ Report Writer entered                                                            Time =      0.98
+
+      BEGIN HEATX TQ-CURVE REPORT FOR BLOCK HEATEX  
+
+      BEGIN COLD-TQCURVE INLET   
+
+      BEGIN HOT-TQCURVE  INLET   
+      END HEATX TQ-CURVE REPORT FOR BLOCK HEATEX  
+
+ Results generated                                                                Time =      1.19
+
+RUN SAVED
+
+
+
+ NO ERRORS OR WARNINGS GENERATED
