@@ -14,4 +14,4 @@
 
 - In the intro where you say "pause to see the design specifications, you cut off after say spec...
 - You name "ethyl acetate" "ETHACID" in the video.
-- Flow rate of acetic acid is 261 kg/min
+- Flow rate of acetic acid is 261 kg/min not 200kgs/min as stated in the video for both ethanol and acetic acid
