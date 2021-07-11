@@ -15,3 +15,7 @@
 - In the intro where you say "pause to see the design specifications, you cut off after say spec...
 - You name "ethyl acetate" "ETHACID" in the video.
 - Flow rate of acetic acid is 261 kg/min not 200kgs/min as stated in the video for both ethanol and acetic acid (Still working on getting a converging solution for this aspect of the paper...)
+
+2.2 
+- Forgot to mention RGibbs
+- K value for reverse reaction is 5.0 not 5.9 e 7 in audio
