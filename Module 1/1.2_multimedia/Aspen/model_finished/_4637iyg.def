@@ -1,0 +1,10 @@
+SLAVE:
+INPUT: _4637iyg.inm
+MODNAME: apmain
+RUNID: _4637iyg
+NEW_RUNID: _4637iyg
+OLD_RUNID: _4637iyg
+PDF: _4637iyg.appdf
+USERNAME: Bryan
+XMOD: D:\ASPEN\Aspen Plus V11.0\Engine\xeq\apmain
+DBCONN: _4637iyg.ads
