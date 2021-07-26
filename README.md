@@ -18,9 +18,13 @@ git clone https://github.com/btanti/aspen-tutorials
 
 ## Usage
 
-```sh
-The scripts in text form are located in the scripts folder. Each module has its own folder, split up into folders containing the raw, unedited audio and video for each tutorial video. Fruity Loops Projects are located in FLP Project Files. Final videos are located in the videos folder (TBC)
-```
+
+The scripts in text form are located in the `scripts` folder.
+
+Each module has its own folder, split up into folders containing the raw, unedited audio and video for each tutorial video.
+
+Fruity Loops Projects are located in `FLP Project Files`. Final videos are located in the `videos` folder (TBC)
+
 
 ## Author
 
