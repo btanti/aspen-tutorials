@@ -38,6 +38,3 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
