@@ -12,12 +12,12 @@
 
 
 ## Requirements
-[VSDC]([https://www.videosoftdev.com/) and [Adobe Premiere](https://www.adobe.com/products/premiere.html) are required to explore the video editing project files.
-[https://www.image-line.com/](FL Studio) is required to edit the audio project files. The plugins used in each .flp are:
-    - Fabfilter Pro-Q3
-    - Fabfilter Pro-G
-    - Waves DeEsser
-    - Fabfilter Pro-C2
+[VSDC]([https://www.videosoftdev.com/) and [Adobe Premiere](https://www.adobe.com/products/premiere.html) are required to explore the video editing project files.  
+[https://www.image-line.com/](FL Studio) is required to edit the audio project files. The plugins used in each .flp are:  
+- Fabfilter Pro-Q3  
+- Fabfilter Pro-G  
+- Waves DeEsser  
+- Fabfilter Pro-C2  
 
 ##
 ## Install
