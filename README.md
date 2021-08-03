@@ -10,6 +10,16 @@
 
 ### 🏠 [Homepage](https://github.com/btanti/aspen-tutorials)
 
+
+## Requirements
+[VSDC]([https://www.videosoftdev.com/) and [Adobe Premiere](https://www.adobe.com/products/premiere.html) are required to explore the video editing project files.  
+[https://www.image-line.com/](FL Studio) is required to edit the audio project files. The plugins used in each .flp are:  
+- Fabfilter Pro-Q3  
+- Fabfilter Pro-G  
+- Waves DeEsser  
+- Fabfilter Pro-C2  
+
+##
 ## Install
 
 ```sh
@@ -18,14 +28,15 @@ git clone https://github.com/btanti/aspen-tutorials
 
 ## Usage
 
-
 The scripts in text form are located in the `scripts` folder.
 
 Each module has its own folder, split up into folders containing the raw, unedited audio and video for each tutorial video.
 
 Fruity Loops Projects are located in `FLP Project Files`. 
 
-Final videos are located in the `videos` folder (TBC)
+Final videos are located in the `videos` folder. (TBC)
+
+Reference documents are located  in `ref`.
 
 
 ## Author
