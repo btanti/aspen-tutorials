@@ -1,0 +1,10 @@
+INPUT: Part_2.inm
+MODNAME: apmain
+RUNID: Part_2
+NEW_RUNID: Part_2
+OLD_RUNID: Part_2
+PDF: Part_2.appdf
+USERNAME: Bryan
+XMOD: D:\ASPEN\Aspen Plus V11.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _5324oav.ads
