@@ -1,0 +1,29 @@
+<TFFTable Description="">
+  <GeneralOptions>Description,SourceAndDestination,StreamClass,MaximumErrorTolerance,CostFlow,PhaseLabel,ComponentAttributes,ParticleSizeDistributions,Temperature,Pressure,MolarVaporFraction,MolarLiquidFraction,MolarSolidFraction,MolarEnthalpy,MolarEntropy,MolarDensity,MassVaporFraction,MassLiquidFraction,MassSolidFraction,MassEnthalpy,MassEntropy,MassDensity,EnthalpyFlow,AverageMolecularWeight,BatchProperties</GeneralOptions>
+  <ScopeOptions>Substreams,MoleFractions,MassFractions</ScopeOptions>
+  <Properties>
+    <Property Type="StateConditionProperty" EngineName="TEMP" />
+    <Property Type="StateConditionProperty" EngineName="PRES" />
+    <Property Type="StateConditionProperty" EngineName="VFRAC" />
+    <Property Type="StateConditionProperty" EngineName="LFRAC" />
+    <Property Type="StateConditionProperty" EngineName="SFRAC" />
+    <Property Type="StateConditionProperty" EngineName="MASSVFRA" />
+    <Property Type="StateConditionProperty" EngineName="MASSLFRA" />
+    <Property Type="StateConditionProperty" EngineName="MASSSFRA" />
+    <Property Type="StateConditionProperty" EngineName="HMX" />
+    <Property Type="StateConditionProperty" EngineName="MASSHMX" />
+    <Property Type="StateConditionProperty" EngineName="SMX" />
+    <Property Type="StateConditionProperty" EngineName="MASSSMX" />
+    <Property Type="StateConditionProperty" EngineName="RHOMX" />
+    <Property Type="StateConditionProperty" EngineName="MASSRHOM" />
+    <Property Type="StateConditionProperty" EngineName="HFLMX" />
+    <Property Type="StateConditionProperty" EngineName="MWMX" />
+    <Property Type="BatchProperty" EngineName="enth_cycle" />
+    <Property Type="BatchProperty" EngineName="enth_time" />
+    <Property Type="BatchProperty" EngineName="cycle_time" />
+    <Property Type="BatchProperty" EngineName="oper_time" />
+    <Property Type="BatchProperty" EngineName="ntrain" />
+    <Property Type="StateConditionProperty" EngineName="MOLEFRAC" />
+    <Property Type="StateConditionProperty" EngineName="MASSFRAC" />
+  </Properties>
+</TFFTable>
