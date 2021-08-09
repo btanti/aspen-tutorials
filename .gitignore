@@ -1,4 +1,6 @@
-*.bak
+*.bkp
 *.ads
 *.for
 *.his
+*.def
+*.appdf
