@@ -4,3 +4,5 @@
 *.his
 *.def
 *.appdf
+*.bak
+**\Adobe*
