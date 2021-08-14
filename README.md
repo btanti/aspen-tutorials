@@ -39,7 +39,7 @@ Final videos are located in the `videos` folder. (TBC)
 Reference documents are located  in `ref`.
 
 
-## Author
+## Authors
 
 👤 **Bryan Tantisujjatham, Justin Lee, Emily Yueh**
 
