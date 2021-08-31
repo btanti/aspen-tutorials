@@ -1,0 +1,16 @@
+;
+;Input file created by Aspen Plus Rel. 37.0 at 17:31:19 Tue Aug 31, 2021
+;Directory C:\Users\Bryan\Documents\aspen-tutorials\Module 3  Runid ea_plant_final
+;
+
+
+DYNAMICS
+    DYNAMICS RESULTS=ON
+
+DELETE
+    DESIGN-SPEC  LIST = DS-1 
+;
+;
+;
+;
+;
