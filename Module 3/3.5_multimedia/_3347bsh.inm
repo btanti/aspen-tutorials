@@ -1,0 +1,21 @@
+;
+;Input file created by Aspen Plus Rel. 37.0 at 18:36:47 Tue Aug 10, 2021
+;Directory C:\Users\Bryan\Documents\aspen-tutorials\Module 3\3.4_multimedia  Runid ea_plant
+;
+
+
+DYNAMICS
+    DYNAMICS RESULTS=ON
+
+BLOCK COL RADFRAC 
+    PARAM NSTAGE=23 ALGORITHM=STANDARD MAXOL=25 DAMPING=NONE 
+    COL-CONFIG CONDENSER=TOTAL 
+    FEEDS EFFLUENT 12 ON-STAGE 
+    PRODUCTS BOTTOMS 23 L / DST 1 L 
+    P-SPEC 1 1. 
+    COL-SPECS QN=3500. <kJ/sec> MOLE-RR=3. 
+;
+;
+;
+;
+;
