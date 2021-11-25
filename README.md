@@ -10,6 +10,8 @@
 
 ### 🏠 [Homepage](https://github.com/btanti/aspen-tutorials)
 
+[Youtube](https://www.youtube.com/watch?v=kjXRGFju6hY&list=PLwAHfJNQszYH_2P4J6fhkxMb1U_9MaR60)
+
 
 ## Requirements
 [VSDC](https://www.videosoftdev.com/) and [Adobe Premiere](https://www.adobe.com/products/premiere.html) are required to explore the video editing project files.  
